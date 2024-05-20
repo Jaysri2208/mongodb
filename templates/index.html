@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MongoDB Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Documents</h1>
+    <ul>
+        {% for document in documents %}
+        <li>{{ document }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('add') }}">Add Document</a>
+    <a href="{{ url_for('update') }}">Update Document</a>
+    <a href="{{ url_for('delete') }}">Delete Document</a>
+</body>
+</html>
